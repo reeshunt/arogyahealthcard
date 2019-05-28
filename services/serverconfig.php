@@ -2,10 +2,10 @@
 
 $servername = "127.0.0.1";
 //copy the above line anbd paste bleowwhere to paste here
-$username = "root";
+$user = "root";
 //again
 
-$password = "";
+$pass = "";
 
 $dbname = "test";
 

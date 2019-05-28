@@ -1,5 +1,5 @@
 
-        <?php include'./library.php'; ?>
+        <?php include'library.php'; ?>
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
