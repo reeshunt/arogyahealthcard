@@ -1,7 +1,33 @@
-<?php include 'header.php'; ?>
+<?php include 'header.php'; ?><!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="img/medical-logo-png-5.png" id="icon" alt="User Icon" />
+      <h1 class="h1">Login</h1>
+    </div>
+
+    <!-- Login Form -->
+      <input type="text" id="email" class="fadeIn second" name="login" placeholder="username">
+      <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
+      <input type="submit" id="loginBtn" class="fadeIn fourth" value="Log In">
+
+    <!-- Remind Passowrd -->
+    <!-- <div id="formFooter">
+      <a class="a underlineHover" href="#">Go to the Site</a>
+    </div> -->
+
+  </div>
+</div>
+
+<?php include 'footer.php'; ?>
+<!--
 
 
-
+ 
  <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta name="x-apple-disable-message-reformatting">
@@ -29,10 +55,11 @@
 
 			<footer>
 				<button id="loginBtn">Login</button>
-	<!-- 			<p style="text-align:center;">Don't have an account? <a href="register.php">Sign Up</a></p>-->
+				<p style="text-align:center;">Don't have an account? <a href="register.php">Sign Up</a></p>
 	 		</footer>
 	</div>
-	<input type="text" style="display:none;" name="user_id" id="user_id">
+-->
+	<input type="text" style="display:none;" name="user_id" id="user_id"> 
 <script>
 	$('#loginBtn').on("click",function(){
 		$.ajax({
@@ -62,166 +89,272 @@
 		})
 	})
 </script>
+
 <style>
-	@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,900|Poppins:400,500');
-	* {
-
-	  text-decoration: none;
-	  box-sizing: border-box;
-	  -webkit-tap-highlight-color:rgba(0,0,0,0);
-	  -webkit-text-size-adjust:none;
-	  -webkit-font-smoothing: antialiased;
-	  -moz-osx-font-smoothing: grayscale;
-	}
-	.parent {
-	  margin: 0;
-	  padding: 0;
-	  font-family: 'Poppins', sans-serif;
-	  overflow-x: hidden;
-	  height: 100vh;
-	  margin: auto;
-	  -webkit-box-align: center;
-	      -ms-flex-align: center;
-	          align-items: center;
-	  display: -webkit-box;
-	  display: -ms-flexbox;
-	  display: flex;
-	  -webkit-box-pack: center;
-	      -ms-flex-pack: center;
-	          justify-content: center;
-	  flex-flow: row wrap;
-	  -ms-flex-flow: row wrap;
-	}
-
-	img {
-		max-width: 100%;
-	}
-
-	.app {
-	  background-color: #fff;
-	  width: 330px;
-	  height: 470px;
-	  margin: 2em auto;
-	  border-radius: 5px;
-	  padding: 1em;
-	  position: relative;
-	  overflow: hidden;
-	  box-shadow: 0 6px 31px -2px rgba(0, 0, 0, .3);
-	}
-
-	a {
-		text-decoration: none;
-		color: #257aa6;
-	}
-
-	p {
-		font-size: 13px;
-		color: #333;
-		line-height: 2;
-	}
-		.light {
-			text-align: right;
-			color: #fff;
-		}
-			.light a {
-				color: #fff;
-			}
-
-	.bg {
-		width: 400px;
-		height: 550px;
-		background: #257aa6;
-		position: absolute;
-		top: -5em;
-		left: 0;
-		right: 0;
-		margin: auto;
-		background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-blue-creative-gradient-decoration-image_11175.jpg");
-		background-position: center;
-		background-size: cover;
-		background-repeat: no-repeat;
-		-webkit-clip-path: ellipse(69% 46% at 48% 46%);
-		clip-path: ellipse(69% 46% at 48% 46%);
-	}
-
-	form {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		width: 100%;
-		text-align: center;
-		padding: 2em;
-	}
-
-	header {
-	    width: 220px;
-	    height: 220px;
-	    margin: 1em auto;
-	  }
-
-	form input {
-	    width: 100%;
-	    padding: 13px 15px;
-	    margin: 0.7em auto;
-	    border-radius: 100px;
-	    border: none;
-	    background: rgb(255,255,255,0.3);
-	    font-family: 'Poppins', sans-serif;
-	    outline: none;
-	    color: #fff;
-	}
-	input::placeholder {
-	    color: #fff;
-	    font-size: 13px;
-	}
-
-	.inputs {
-		margin-top: -4em;
-	}
-
-	footer {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-	}
-
-	button {
-		width: 100%;
-	    padding: 13px 15px;
-	    border-radius: 100px;
-	    border: none;
-	    background: #257aa6;
-	    font-family: 'Poppins', sans-serif;
-	    outline: none;
-	    color: #fff;
-	}
 	
-	@media screen and (max-width: 640px) {
-			.app {
-				width: 100%;
-				height: 100vh;
-				border-radius: 0;
-			}
+/* BASIC */
 
-			.bg {
-				top: -7em;
-				width: 450px;
-				height: 95vh;
-			}
-			header {
-				width: 90%;
-				height: 250px;
-			}
-			.inputs {
-				margin: 0;
-			}
-			input, button {
-				padding: 18px 15px;
-			}
-		}
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+}
 
+.a {
+  color: #92badd;
+  display:inline-block;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.h2 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display:inline-block;
+  margin: 40px 8px 10px 8px; 
+  color: #cccccc;
+}
+
+
+
+/* STRUCTURE */
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  /*justify-content: center;*/
+  width: 100%;
+  min-height: 100%;
+  padding: 20px;
+}
+
+#formContent {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #fff;
+  padding: 30px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  padding: 0px;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+#formFooter {
+  background-color: #f6f6f6;
+  border-top: 1px solid #dce8f1;
+  padding: 25px;
+  text-align: center;
+  -webkit-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+
+
+/* TABS */
+
+.h2.inactive {
+  color: #cccccc;
+}
+
+.h2.active {
+  color: #0d0d0d;
+  border-bottom: 2px solid #5fbae9;
+}
+
+
+
+/* FORM TYPOGRAPHY*/
+
+input[type=button], input[type=submit], input[type=reset]  {
+  background-color: #56baed;
+  border: none;
+  color: white;
+  padding: 15px 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 13px;
+  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  margin: 5px 20px 40px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
+  background-color: #39ace7;
+}
+
+input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
+  -moz-transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+input[type=text] , input[type=password]  {
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+input[type=text]:focus,input[type=password]:focus {
+  background-color: #fff;
+  border-bottom: 2px solid #5fbae9;
+}
+
+input[type=text]:placeholder ,input[type=password]:placeholder  {
+  color: #cccccc;
+}
+
+
+
+/* ANIMATIONS */
+
+/* Simple CSS3 Fade-in-down Animation */
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/* Simple CSS3 Fade-in Animation */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fadeIn {
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fadeIn.first {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.fadeIn.second {
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+.fadeIn.third {
+  -webkit-animation-delay: 0.8s;
+  -moz-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+.fadeIn.fourth {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+/* Simple CSS3 Fade-in Animation */
+.underlineHover:after {
+  display: block;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 2px;
+  background-color: #56baed;
+  content: "";
+  transition: width 0.2s;
+}
+
+.underlineHover:hover {
+  color: #0d0d0d;
+}
+
+.underlineHover:hover:after{
+  width: 100%;
+}
+
+.h1{
+    color:#60a0ff;
+}
+
+/* OTHERS */
+
+*:focus {
+    outline: none;
+} 
+
+#icon {
+  width:30%;
+}
+
+body{
+  overflow: hidden;
+}
 </style>
 
 
@@ -230,5 +363,4 @@
 
 
 
-
-<?php include 'footer.php'; ?>
+ 

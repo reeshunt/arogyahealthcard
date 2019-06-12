@@ -1,4 +1,4 @@
-<script src="assets/jquery.js" ></script>
+<script src="../assets/jquery.js" ></script>
 <link rel="stylesheet" type="text/css" href="../assets/datatable.min.css">
 <script type="text/javascript" charset="utf8" src="../assets/datatable.min.js"></script>
 <link rel="stylesheet" href="../assets/bootstrap.min.css">
@@ -12,6 +12,41 @@
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--/*<div class='menuparent' style="position: fixed;z-index: 99;width: 100%;top: 0px;">-->
+  <div class="nav">
+    <div class="subnav1">
+    <div class="nav-header"> 
+      <div class="nav-title" style="float:left;">
+        <a href="index.php"><img class="logoimg" src="../img/medical-logo-png-5.png" ></a>
+      </div>
+       <a class="companytitle" href="../index.php">Arogya Health Card</a>
+         <br>
+     <span class="companysubtitle">Making HealthCare Affordable ...</span>  
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+  </div>
+  
+    <div class="nav-links" style="margin-top: -80px;font-size: 23px;width: 28%">
+      <a href="../index.php" style="color:white;height: 60px">Home</a>
+      <!-- <a href="../login.php" style="color:white">Login</a> -->
+      <a href="../services.php" style="color:white">Services</a>
+      <a href="../contactus.php" style="color:white">Contact Us</a>
+    
+
+    </div>
+  </div>
+</div>
+
+
+
 
 <?php
 
@@ -19,7 +54,7 @@ session_start();
 if($_SESSION["user_id"]>0){
   //session valid here
   //getting details of user by his userid
-$servername = "127.0.0.1";
+$servername = "localhost";
 $user = "root";
 $pass = "";
 $dbname = "test";
@@ -30,7 +65,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "SELECT name,patient_id,mail,address,mobile,date_of_registration FROM tbl_m_user where user_id=".$_SESSION['user_id'];
+$sql = "SELECT name,patient_id,mail,address,mobile,date_of_registration,valid_till FROM tbl_m_user where user_id=".$_SESSION['user_id'];
 $result = $conn->query($sql);
 
 if (@$result->num_rows > 0) {
@@ -39,41 +74,43 @@ if (@$result->num_rows > 0) {
     ?>
 
 <link link="link" href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet"/>
-<div class="entire">
-  <div class="in-entire">
-    <div class="left-cov">
-      <div class="profile">
-        <!--<div class="human"></div>-->
-        <img height='140px' src='../client_data/image_uploads/<?php echo $row['mail'] ?>'>
-      </div>
-      <div class="basic"><span><?php echo $row["name"]."</br>"; echo "Patient ID :".$row['patient_id']; ?></span>
-      <!--  <span class="ball"></span> -->
-      </div>
-    </div>
-    <div class="right-cov">
-      <div class="detail">
-        <h3 class="h3">My Profile</h3>
-      </div>
-      <div class="full-detail">
-        <h4 class="h4">Email</h4>
-        <p class="p"> <a class="a"><?php echo $row["mail"]; ?></a></p>
 
-        <h4 class="h4">Address</h4>
-        <p class="p"> <a class="a"><?php echo $row["address"]; ?></a></p>
 
-        <h4 class="h4">Mobile</h4>
-        <p class="p"> <a class="a"><?php echo $row["mobile"]; ?></a></p>
+<div class="container" style="height: 43%;max-height: 55% !important;">
+  <div class="svg-background"></div>
+  <div class="svg-background2"></div>
+  <div class="circle"></div>
+  <img class="profile-img" src='../client_data/image_uploads/<?php echo $row['mail'] ?>'>
+  <div class="text-container">
+    <p class="title-text"><?php echo $row["name"]."</br>"; echo "User ID :".$row['patient_id']; ?></p>
+<!--     <p class="info-text">Software Developer</p>
+ -->    
+    <p class="desc-text">
+        <!--Email : <?php echo $row["mail"]; ?> <br/>-->
+      Mobile : <?php echo $row["mobile"]; ?> <br/>
+      Date of Registration : <?php echo date("d-m-Y", strtotime($row["date_of_registration"]));     
 
-        <h4 class="h4">Date of Registration</h4>
-        <p class="p"> <a class="a"><?php echo $row["date_of_registration"]; ?></a></p>
-
-      </div>
-    </div>
+      ?> <br/>
+      Valid Till : <?php 
+      if($row["valid_till"] >0){
+      echo date("d-m-Y", strtotime($row["valid_till"]));     
+      }
+      else{
+          echo $row["valid_till"];
+      }
+      ?> <br/>
+       Address : <?php echo $row["address"]; ?> <br/>
+      
+      
+    </p>
   </div>
+  <form method="post">
+        <button name="logoutBtn" style="float:right;margin: 5px 5px 1px 1px" class="btn btn-danger">Logout</button>
+      </form>
 </div>
-<form method="post">
-<button name="logoutBtn" style="float:right;margin: 5px 5px 1px 1px" class="btn btn-danger">Logout</button>
-</form>
+
+
+
 <?php 
 }
 } 
@@ -99,9 +136,102 @@ header("Location:../index.php");
 }
 
  ?>
-}
 
 <style>
+/* profile tab start here    */
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ECEFF1;
+  width: 500px;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.menu-icon {
+  position: absolute;
+  right: 0;
+  width: 53px;
+  height: 53px;
+  filter: invert(40%) sepia(57%) saturate(2228%) hue-rotate(189deg) brightness(96%) contrast(87%);
+}
+
+.svg-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #1E88E5;
+  -webkit-clip-path: polygon(0 0, 14% 0, 48% 100%, 0% 100%);
+  clip-path: polygon(0 0, 14% 0, 48% 100%, 0% 100%);
+}
+
+.svg-background2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  background-color: rgba(0,0,0,0.12);
+  z-index: -9;
+  -webkit-clip-path: polygon(0 0, 14% 0, 48% 100%, 0% 100%);
+  clip-path: polygon(0 0, 14% 0, 48% 100%, 0% 100%);
+}
+
+.profile-img {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  margin-top: 55px;
+  margin-left: 25px;
+  border-radius: 50%;
+}
+
+.circle {
+  position: absolute;
+  width: 162px;
+  height: 161px;
+  left: 0;
+  top: 0;
+  background-color: #ECEFF1;
+  border-radius: 50%;
+  margin-top: 50.5px;
+  margin-left: 35px;
+}
+
+.text-container {
+  position: absolute;
+  right: 0;
+  margin-right: 40px;
+  margin-top: 45px;
+  max-width: 230px;
+  text-align: center;
+}
+
+.title-text {
+  color: #263238;
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.info-text {
+  margin-top: 10px;
+  font-siize: 18px;
+}
+
+.desc-text {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* profile tab ends here    */
+
 /*animate the whole page as animate in 
 
   -webkit-animation: intro 1s ease-in-out 1s forwards;
@@ -113,6 +243,9 @@ header("Location:../index.php");
 
 
    */
+.human:before{
+  display: none;
+}
 .footbar{
   background-color: #000000d1;
     width: 98%;
@@ -199,6 +332,7 @@ header("Location:../index.php");
     width: 100%;
   }
 }
+
 .profile {
   margin: 100px auto 50px auto;
   width: 100px;
@@ -206,10 +340,10 @@ header("Location:../index.php");
 }
 
 .human {
-  width: 50px;
-  height: 50px;
-  margin: 0 auto;
-  border: 9px solid #fff;
+  width: 150px;
+  height: 150px;
+  margin-left: -20px;
+  border: 2px solid #fff;
   border-radius: 50%;
   position: relative;
 }
@@ -318,4 +452,4 @@ header("Location:../index.php");
             transform: translatex(10px);
   }
 }
-<style>
+</style>

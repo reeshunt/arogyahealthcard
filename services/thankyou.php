@@ -1,4 +1,50 @@
-<div class="modal">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--/*<div class='menuparent' style="position: fixed;z-index: 99;width: 100%;top: 0px;">-->
+  <div class="nav">
+    <div class="subnav1">
+    <div class="nav-header"> 
+      <div class="nav-title" style="float:left;">
+        <a href="index.php"><img class="logoimg" src="../img/medical-logo-png-5.png" ></a>
+      </div>
+       <a class="companytitle" href="../index.php">Arogya Health Card</a>
+         <br>
+     <span class="companysubtitle">Making HealthCare Affordable ...</span>  
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+  </div>
+  
+    <div class="nav-links" style="margin-top: -80px;font-size: 23px;">
+      <a href="../index.php" style="color:white;height: 60px;">Home</a>
+      <a href="../login.php" style="color:white">Login</a>
+      <a href="../services.php" style="color:white">Services</a>
+      <a href="../contactus.php" style="color:white">Contact Us</a>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/jquery.js" ></script>
+<link rel="stylesheet" type="text/css" href="../assets/datatable.min.css">
+<script type="text/javascript" charset="utf8" src="../assets/datatable.min.js"></script>
+<script src="../assets/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../assets/style.css">
+<script src="../assets/customjs.js"></script>
+
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+
+
+<div class="modall" style="display:block !important">
   <div id="success-icon">
     <div></div>
   </div>
@@ -6,18 +52,32 @@
     <line x1="1" y1="-1" x2="9" y2="11" stroke-width="2.5" />
     <line x1="9" y1="-1" x2="1" y2="11" stroke-width="2.5" />
   </svg>
-  <h1><strong>Thank You For Registering with Us!</strong></h1>
+  <h1 class="h11"><strong>Thank You For Registering with Us!</strong></h1>
+  <hr><br/>
+  <h4 class="h14"><strong>Please Pay Rs. 500 through Google Pay to complete registration</strong></h4>
   <svg class="progress" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 4.5">
     <rect height="4.5" width="100" rx="2" ry="2" />
   </svg>
   </div>
-  <style>
 
+
+<div class="col-lg-12">
+  <footer class="footbar">
+         <span class="c_year">
+          <a href="../Terms-and-Conditions.php">Terms & Conditions |</a> 
+          <a href="../#">Privacy Policy |</a>
+          <a href="../copyright.php"> &copy; 2019 ArogyaHealthCard </a></span>
+    </footer>
+</div>
+
+
+
+  <style>
 body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
-.modal {
+.modall {
   position: relative;
   background-color: #fff;
   box-sizing: border-box;
@@ -31,8 +91,11 @@ body {
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
 }
 
-h1 {
+.h11 {
   font-size: 37px;
+}
+.h14 {
+  font-size: 17px;
 }
 
 .points {
@@ -40,16 +103,17 @@ h1 {
   font-size: 18px;
 }
 
-hr {
+.hrl {
   border: none;
   height: 1px;
   background-color: #dddddd;
   margin: 20px auto;
 }
 
-.progress {
+.progress2 {
   margin-top: 20px;
   margin-bottom: 27px;
+  width:300px;
 }
 .progress rect {
   fill: #59bc69;
@@ -91,3 +155,5 @@ hr {
 }
 
   </style>
+
+

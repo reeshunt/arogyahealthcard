@@ -1,6 +1,6 @@
 <?php
 
-$servername = "127.0.0.1";
+$servername = "localhost";
 //copy the above line anbd paste bleowwhere to paste here
 $user = "root";
 //again

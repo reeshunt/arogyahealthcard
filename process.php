@@ -1,5 +1,5 @@
 <?php
-@$servername = "127.0.0.1";
+@$servername = "localhost";
 @$username = "root";
 @$passw = "";
 @$dbname = "test";
@@ -113,6 +113,8 @@ echo "<script>window.location.href='services/thankyou.php';</script>";
 } 
  else {
  	echo "Error: " . $sql . "<br>" . $conn->error; 
+ 	$err = $conn->error;
+ 	var_dump(strpos($err,"Incorrect integer"));
  }
 @$conn->close();
 
