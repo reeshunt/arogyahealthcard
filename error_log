@@ -1,0 +1,20 @@
+[04-Jun-2019 12:01:00 Etc/GMT] PHP Warning:  include(header.php): failed to open stream: No such file or directory in /home/arogyahe/public_html/index.php on line 2
+[04-Jun-2019 12:01:00 Etc/GMT] PHP Warning:  include(header.php): failed to open stream: No such file or directory in /home/arogyahe/public_html/index.php on line 2
+[04-Jun-2019 12:01:00 Etc/GMT] PHP Warning:  include(): Failed opening 'header.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/arogyahe/public_html/index.php on line 2
+[04-Jun-2019 12:01:00 Etc/GMT] PHP Warning:  include(footer.php): failed to open stream: No such file or directory in /home/arogyahe/public_html/index.php on line 281
+[04-Jun-2019 12:01:00 Etc/GMT] PHP Warning:  include(footer.php): failed to open stream: No such file or directory in /home/arogyahe/public_html/index.php on line 281
+[04-Jun-2019 12:01:00 Etc/GMT] PHP Warning:  include(): Failed opening 'footer.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/arogyahe/public_html/index.php on line 281
+[04-Jun-2019 12:02:42 Etc/GMT] PHP Warning:  include(header.php): failed to open stream: No such file or directory in /home/arogyahe/public_html/index.php on line 2
+[04-Jun-2019 12:02:42 Etc/GMT] PHP Warning:  include(header.php): failed to open stream: No such file or directory in /home/arogyahe/public_html/index.php on line 2
+[04-Jun-2019 12:02:42 Etc/GMT] PHP Warning:  include(): Failed opening 'header.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/arogyahe/public_html/index.php on line 2
+[04-Jun-2019 12:02:42 Etc/GMT] PHP Warning:  include(footer.php): failed to open stream: No such file or directory in /home/arogyahe/public_html/index.php on line 281
+[04-Jun-2019 12:02:42 Etc/GMT] PHP Warning:  include(footer.php): failed to open stream: No such file or directory in /home/arogyahe/public_html/index.php on line 281
+[04-Jun-2019 12:02:42 Etc/GMT] PHP Warning:  include(): Failed opening 'footer.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/arogyahe/public_html/index.php on line 281
+[14-Jun-2019 11:41:05 Etc/GMT] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/arogyahe/public_html/process.php on line 53
+[14-Jun-2019 11:41:05 Etc/GMT] PHP Notice:  Undefined variable: _SESSION in /home/arogyahe/public_html/process.php on line 54
+[14-Jun-2019 11:41:05 Etc/GMT] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/arogyahe/public_html/register.php:2) in /home/arogyahe/public_html/process.php on line 125
+[14-Jun-2019 11:41:05 Etc/GMT] PHP Warning:  include(../footer.php): failed to open stream: No such file or directory in /home/arogyahe/public_html/process.php on line 130
+[14-Jun-2019 11:41:05 Etc/GMT] PHP Warning:  include(../footer.php): failed to open stream: No such file or directory in /home/arogyahe/public_html/process.php on line 130
+[14-Jun-2019 11:41:05 Etc/GMT] PHP Warning:  include(): Failed opening '../footer.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/arogyahe/public_html/process.php on line 130
+[14-Jun-2019 11:54:40 Etc/GMT] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/arogyahe/public_html/process.php on line 47
+[14-Jun-2019 11:54:47 Etc/GMT] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/arogyahe/public_html/process.php on line 47

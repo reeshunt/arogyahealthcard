@@ -36,3 +36,57 @@
 
 
 <?php include 'footer.php'; ?>
+<style type="text/css">
+	@media only screen and (max-width: 900px) {
+		.companytitle{
+     float: right;
+    font-size: 30px;
+    margin-right: 5px;
+    }  
+    .companysubtitle{
+      margin: -45px -9px 0px 128px
+    }
+
+		.copyright-content{
+			width:100%;
+			float:left;
+			margin-left: 0px !important;
+			margin-right: 0px !important;
+		}
+		.companytitle{
+			    float: right;
+    margin-right: 5px;
+    font-size: 29px;
+		}
+		.logoimg{
+			padding-left: 0px !important;
+		}
+		.companysubtitle{
+			margin:-55px -9px 0px 115px;
+		}
+		.mrgleft{
+			    margin-left: -327px !important;
+		}
+		.cpright{
+    float: left !important;
+        margin-left: 76px;
+
+    }
+    .footbar{
+      width:92%;
+    }
+    .tnc{
+          margin-left: 34px;
+    }
+}
+@media only screen and (min-width: 500px) {
+     .mobilemenu{
+      display: none;
+    }
+
+  }
+</style>
+
+
+
+

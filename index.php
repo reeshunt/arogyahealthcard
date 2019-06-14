@@ -2,11 +2,11 @@
 <?php include 'header.php'; ?>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<div class="col-md-12" style="margin-top: 100px">
+<div class="col-md-12 cartopphone" style="margin-top: 100px">
     <div class="col-md-4 col-md-offset-4">
 
       <div class="col-lg-12" id="card1">
-        <div class="floating" style='background-image:url("./img/card2.jpg");background-position:center;background-repeat: no-repeat;background-size: cover;'>
+        <div class="floating card2-ph" style='background-image:url("./img/card2.jpg");background-position:center;background-repeat: no-repeat;background-size: cover;'>
           <div class="thickness"></div>
           <div class="thickness"></div>
           <div class="thickness"></div>
@@ -26,8 +26,8 @@
         </div>
       </div>
 
-      <div class="col-lg-12" id="card2" style="display:none">
-        <div class="floating" style='background-image:url("./img/card.jpg");background-position:center;background-repeat: no-repeat;background-size: cover;'>
+      <div class="col-lg-12 " id="card2" style="display:none">
+        <div class="floating card2-ph" style='background-image:url("./img/card.jpg");background-position:center;background-repeat: no-repeat;background-size: cover;'>
           <div class="thickness"></div>
           <div class="thickness"></div>
           <div class="thickness"></div>
@@ -47,17 +47,6 @@
         </div>
       </div>
 
-<!-- <div class="card-image">
-            <center>
-            <img class="img-responsive arogyacardimg" src="img/card_img.jpg">
-             
-                <div class="btncontainer" style="display:flex;">
-                   <a style="font-size:18px;justify-content: center;" href="#" title="Button push blue/green" class="button btnPush btnBlueGreen">BUY NOW</a>
-                </div>
-            </center>
-        </div>
-      -->
-       
     </div>
 
 </div>
@@ -88,7 +77,7 @@
     </section>
 <div class="col-lg-12 margintop4p"> 
       <div class="col-lg-3 col-lg-offset-1">
-          <div class="card" style="width: 18rem;width: 27rem;height:58rem;box-shadow: 7px 6px 13px 1px black;margin-left: -56px;">
+          <div class="card p56left" style="width: 18rem;width: 27rem;height:58rem;box-shadow: 7px 6px 13px 1px black;margin-left: -56px;">
             <span class="boxhead">VISION</span>
             <img class="card-img-top borderradius10p" src="./img/vision.jpeg" height="200" width="269px" alt="Card image cap">
           <div class="card-body" >
@@ -98,7 +87,7 @@
       </div>
       </div>
       <div class="col-lg-3 col-lg-offset-1">
-          <div class="card" style="width: 18rem;width: 27rem;height:58rem;box-shadow: 7px 6px 13px 1px black;margin-left: -22px;">
+          <div class="card mediacard margtop" style="width: 18rem;width: 27rem;height:58rem;box-shadow: 7px 6px 13px 1px black;margin-left: -22px;">
              <span class="boxhead">BENEFITS</span>
             <img class="card-img-top borderradius10p" src="./img/benifits.jpeg" height="200" alt="Card image cap">
           <div class="card-body">
@@ -117,7 +106,7 @@
       </div>
       </div>
       <div class="col-lg-3 col-lg-offset-1">
-          <div class="card" style="width: 18rem;width: 27rem;height:58rem;box-shadow: 7px 6px 13px 1px black;">
+          <div class="card margtop" style="width: 18rem;width: 27rem;height:58rem;box-shadow: 7px 6px 13px 1px black;">
              <span class="boxhead2" style="width: 100%;margin-left: 54px;">HOW TO USE</span>
             <img class="card-img-top borderradius10p" src="./img/uses.jpeg" height="200" width="100%" alt="Card image cap">
           <div class="card-body">
@@ -140,7 +129,7 @@
     color: antiquewhite;">
 <div class="col-lg-12">
 <div class="testimonialHeading margintop4p">TESTIMONIALS</div>
-  <img src="./img/heading-line.png" style="margin-left:45% ">
+  <img class="per27" src="./img/heading-line.png" style="margin-left:45% ">
                     <div class="col-md-12 carousel slide" data-wow-delay="0.1s" style="background-color: #00000036;">
                         <div class="carousel slide" data-ride="carousel" id="quote-carousel">
                             <!-- Bottom Carousel Indicators -->
@@ -279,3 +268,90 @@ $(function(){
 });
   </script>
 <?php include 'footer.php'; ?>
+<style>
+@media only screen and (max-width: 900px) {
+    .companytitle{
+     float: right;
+    margin-top: -83px;
+    font-size: 30px;
+    margin-right: 5px;
+    }  
+    .companysubtitle{
+      margin: -45px -9px 0px 128px
+    }
+    .btncontainer{
+          margin-left: 7%;
+    }
+    .card2-ph{
+      width: 340px !important;
+    margin-left: -35px !important
+    }
+    .margintop4p{
+          margin-left: 66px;
+    }
+    .card{
+          margin-left: -49px;
+          margin-top:10px;
+    }
+    .mediacard{
+          margin-left: -46px !important;
+    }
+    .p56left{
+    margin-left: -51px !important;
+
+    }
+    .margtop{
+      margin-top: 40px !important;
+    }
+    .testimonialHeading{
+          margin-left: 26% !important;
+          margin-top: 70px !important;
+
+    }
+    .per27{
+    margin-left: 27% !important;
+
+    }
+    .carousel-indicators{
+          position: inherit;
+    }
+    .slide{
+          margin-bottom: 20px;
+
+    }
+    .cpright{
+    float: left !important;
+        margin-left: 76px;
+
+    }
+    .footbar{
+      width:92%;
+    }
+    .tnc{
+          margin-left: 34px;
+    }
+    .subnav1{
+          margin-left: -10px;
+    }
+    .mobilemenu{
+      display: block;
+    }
+    .cartopphone{
+      margin-top: 200px !important;
+    }
+    .subnav1{
+      margin-top: -15px;
+    }
+    
+
+
+}
+@media only screen and (min-width: 500px) {
+     .mobilemenu{
+      display: none;
+    }
+
+  }
+
+
+</style>

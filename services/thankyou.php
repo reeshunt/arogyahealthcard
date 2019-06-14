@@ -66,7 +66,7 @@
          <span class="c_year">
           <a href="../Terms-and-Conditions.php">Terms & Conditions |</a> 
           <a href="../#">Privacy Policy |</a>
-          <a href="../copyright.php"> &copy; 2019 ArogyaHealthCard </a></span>
+          <a class="cpr" href="../copyright.php"> &copy; 2019 ArogyaHealthCard </a></span>
     </footer>
 </div>
 
@@ -152,6 +152,99 @@ body {
   border-left: solid .8em white;
   height: 15%;
   width: 33%;
+}
+@media only screen and (max-width: 900px) {
+    .companytitle{
+     float: right;
+    margin-top: -83px;
+    font-size: 30px;
+    margin-right: 3px;
+    }  
+    .companysubtitle{
+      margin: -45px -1px 0px 112px
+    }
+    .btncontainer{
+          margin-left: 7%;
+    }
+    .card2-ph{
+      width: 340px !important;
+    margin-left: -35px !important
+    }
+    .margintop4p{
+          margin-left: 66px;
+    }
+    .card{
+          margin-left: -49px;
+          margin-top:10px;
+    }
+    .mediacard{
+          margin-left: -46px !important;
+    }
+    .p56left{
+    margin-left: -51px !important;
+
+    }
+    .margtop{
+      margin-top: 40px !important;
+    }
+    .testimonialHeading{
+          margin-left: 26% !important;
+          margin-top: 70px !important;
+
+    }
+    .per27{
+    margin-left: 27% !important;
+
+    }
+    .carousel-indicators{
+          position: inherit;
+    }
+    .slide{
+          margin-bottom: 20px;
+
+    }
+    .cpright{
+    float: left !important;
+        margin-left: 76px;
+
+    }
+    .footbar{
+      width:92%;
+    }
+    .tnc{
+          margin-left: 34px;
+    }
+    .subnav1{
+          margin-left: -10px;
+    }
+    .mobilemenu{
+      display: block;
+    }
+    .cartopphone{
+      margin-top: 200px !important;
+    }
+    .subnav1{
+      margin-top: -15px;
+    }
+    
+.logoimg{
+  padding-left: 0px !important;
+}
+.modall{
+      margin-bottom: 100px;
+}
+.nav-header{
+      margin-left: 3px;
+
+}
+.nav{
+      margin-left: 5px;
+
+}
+.cpr{
+      margin-left: 75px;
+}
+
 }
 
   </style>

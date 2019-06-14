@@ -11,8 +11,8 @@
     </div>
 
     <!-- Login Form -->
-      <input type="text" id="email" class="fadeIn second" name="login" placeholder="username">
-      <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
+      <input type="text" id="email" class="fadeIn second" name="login" placeholder="UserId">
+      <input type="password" id="password" class="fadeIn third" name="login" placeholder="Password">
       <input type="submit" id="loginBtn" class="fadeIn fourth" value="Log In">
 
     <!-- Remind Passowrd -->
@@ -355,6 +355,107 @@ input[type=text]:placeholder ,input[type=password]:placeholder  {
 body{
   overflow: hidden;
 }
+
+
+
+
+@media only screen and (max-width: 900px) {
+ .companytitle{
+     float: right;
+    margin-top: -83px;
+    font-size: 30px;
+    margin-right: 5px;
+    }  
+    .companysubtitle{
+      margin: -45px -9px 0px 128px
+    }
+    .btncontainer{
+          margin-left: 7%;
+    }
+    .card2-ph{
+      width: 340px !important;
+    margin-left: -35px !important
+    }
+    .margintop4p{
+          margin-left: 66px;
+    }
+    .card{
+          margin-left: -49px;
+          margin-top:10px;
+    }
+    .mediacard{
+          margin-left: -46px !important;
+    }
+    .p56left{
+    margin-left: -51px !important;
+
+    }
+    .margtop{
+      margin-top: 40px !important;
+    }
+    .testimonialHeading{
+          margin-left: 26% !important;
+          margin-top: 70px !important;
+
+    }
+    .per27{
+    margin-left: 27% !important;
+
+    }
+    .carousel-indicators{
+          position: inherit;
+    }
+    .slide{
+          margin-bottom: 20px;
+
+    }
+    .cpright{
+    float: left !important;
+        margin-left: 76px;
+
+    }
+    .footbar{
+      width:92%;
+    }
+    .tnc{
+          margin-left: 34px;
+    }
+    .subnav1{
+          margin-left: -10px;
+    }
+    .mobilemenu{
+      display: block;
+    }
+    .cartopphone{
+      margin-top: 200px !important;
+    }
+    .subnav1{
+      margin-top: -15px;
+    }
+    .fadeInDown{
+          margin-top: 125px;
+    }
+    body{
+  overflow: unset;
+}
+
+    
+
+}
+
+
+@media only screen and (min-width: 500px) {
+     .mobilemenu{
+      display: none;
+    }
+
+  }
+
+
+
+
+
+
 </style>
 
 

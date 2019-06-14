@@ -2,11 +2,11 @@
 
 $servername = "localhost";
 //copy the above line anbd paste bleowwhere to paste here
-$user = "root";
+$user = "arogyahe_admin";
 //again
 
-$pass = "";
+$pass = "sql2008@";
 
-$dbname = "test";
+$dbname = "arogyahe_databook";
 
 //save the file

@@ -1,8 +1,8 @@
 <?php
-@$servername = "localhost";
-@$username = "root";
-@$passw = "";
-@$dbname = "test";
+@$servername = "127.0.0.1";
+@$username = "arogyahe_admin";
+@$passw = "sql2008@";
+@$dbname = "arogyahe_databook";
 
 $conn = new mysqli(@$servername, @$username, @$passw, @$dbname); 
 
@@ -40,13 +40,79 @@ if(isset($_POST['registerBtn'])){
 @$registerdate = $_POST['registerdate'];
 
 @$uploaddir = 'client_data/image_uploads/';
-@$_FILES['userfile']['name']=$email.".jpg";
+@$_FILES['userfile']['name']=$counter.".jpg";
 @$filename = @$_FILES['userfile']['name'];
 @$uploadfile = @$uploaddir . basename($filename);
+
+if($name==""){
+    echo "<script>alert('Please Enter Name')</script>";
+     	return false;
+}
+
+if($address==""){
+    echo "<script>alert('Please Enter Address')</script>";
+     	return false;
+}
+
+if($town==""){
+    echo "<script>alert('Please Enter Town')</script>";
+     	return false;
+}
+
+if($village==""){
+    echo "<script>alert('Please Enter Village')</script>";
+     	return false;
+}
+
+if($po==""){
+    echo "<script>alert('Please Enter PO')</script>";
+     	return false;
+}
+
+if($ps==""){
+    echo "<script>alert('Please Enter PS')</script>";
+     	return false;
+}
+if($pincode==""){
+    echo "<script>alert('Please Enter Pincode')</script>";
+     	return false;
+}
+if($state==""){
+    echo "<script>alert('Please Enter state')</script>";
+     	return false;
+}
+if($country==""){
+    echo "<script>alert('Please Enter country')</script>";
+     	return false;
+}
+if($gender==""){
+    echo "<script>alert('Please Enter gender')</script>";
+     	return false;
+}
+if($dob==""){
+    echo "<script>alert('Please Enter date of birth')</script>";
+     	return false;
+}
+if($password==""){
+    echo "<script>alert('Please Enter Password')</script>";
+     	return false;
+}
+if($mobile==""){
+    echo "<script>alert('Please Enter Mobile')</script>";
+     	return false;
+}
+if($registerdate==""){
+    echo "<script>alert('Please Enter Register Date')</script>";
+     	return false;
+}
+
+
 
 if (move_uploaded_file($_FILES['userfile']['tmp_name'], @$uploadfile)) {
 
 } else {
+     	echo "<script>alert('Please Upload Picture')</script>";
+     	return false;
     //echo "Possible file upload attack!\n";
 }
 
@@ -59,6 +125,7 @@ if (move_uploaded_file($_FILES['userfile']['tmp_name'], @$uploadfile)) {
  if(trim(strtolower(@$password))!= trim(strtolower(@$cpassword))){
  	//echo json_encode(array("error"=>"Password doesn't Match"));
  	echo "<script>alert('Password doesn't Match')</script>";
+ 	 	return false;
  }
  elseif(!@$uppercase ) {
  	//echo json_encode(array("error"=>"Password Must Contain UpperCase"));
@@ -83,16 +150,16 @@ elseif(strlen(@$password) < 8){
 }
 // /////////////////////////
 // //Email validation
- @$emailRegex = '/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/'; 
+ //@$emailRegex = '/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/'; 
 
- if (preg_match(@$emailRegex, @$email)) {
+ //if (preg_match(@$emailRegex, @$email)) {
 
- }
- else{
+ //}
+ //else{
  	//echo json_encode(array("error"=>"Invalid Email Format"));
- 	echo "<script>alert('Invalid Email Format')</script>";
- 	return false;
- }
+ 	//echo "<script>alert('Invalid Email Format')</script>";
+ 	//return false;
+ //}
 
 
 $conn = new mysqli(@$servername, @$username, @$passw, @$dbname);

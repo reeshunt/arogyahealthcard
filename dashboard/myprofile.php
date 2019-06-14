@@ -54,10 +54,10 @@ session_start();
 if($_SESSION["user_id"]>0){
   //session valid here
   //getting details of user by his userid
-$servername = "localhost";
-$user = "root";
-$pass = "";
-$dbname = "test";
+$servername = "127.0.0.1";
+$user = "arogyahe_admin";
+$pass = "sql2008@";
+$dbname = "arogyahe_databook";
 
 $conn = new mysqli($servername, $user, $pass, $dbname);
 // Check connection
@@ -76,19 +76,19 @@ if (@$result->num_rows > 0) {
 <link link="link" href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet"/>
 
 
-<div class="container" style="height: 43%;max-height: 55% !important;">
+<div class="container ccard" style="height: 45%;">
   <div class="svg-background"></div>
   <div class="svg-background2"></div>
   <div class="circle"></div>
-  <img class="profile-img" src='../client_data/image_uploads/<?php echo $row['mail'] ?>'>
+  <img class="profile-img" src='../client_data/image_uploads/<?php echo $row['patient_id'] ?>'>
   <div class="text-container">
     <p class="title-text"><?php echo $row["name"]."</br>"; echo "User ID :".$row['patient_id']; ?></p>
 <!--     <p class="info-text">Software Developer</p>
  -->    
     <p class="desc-text">
-        <!--Email : <?php echo $row["mail"]; ?> <br/>-->
+      <!--Email : <?php echo $row["mail"]; ?> <br/>-->
       Mobile : <?php echo $row["mobile"]; ?> <br/>
-      Date of Registration : <?php echo date("d-m-Y", strtotime($row["date_of_registration"]));     
+      Registration Date: <?php echo date("d-m-Y", strtotime($row["date_of_registration"]));     
 
       ?> <br/>
       Valid Till : <?php 
@@ -452,4 +452,100 @@ header("Location:../index.php");
             transform: translatex(10px);
   }
 }
+@media only screen and (max-width: 900px) {
+    .companytitle{
+     float: right;
+    margin-top: -83px;
+    font-size: 30px;
+    margin-right: 5px;
+    }  
+    .companysubtitle{
+      margin: -45px -9px 0px 128px
+    }
+    .btncontainer{
+          margin-left: 7%;
+    }
+    .card2-ph{
+      width: 340px !important;
+    margin-left: -35px !important
+    }
+    .margintop4p{
+          margin-left: 66px;
+    }
+    .card{
+          margin-left: -49px;
+          margin-top:10px;
+    }
+    .mediacard{
+          margin-left: -46px !important;
+    }
+    .p56left{
+    margin-left: -51px !important;
+
+    }
+    .margtop{
+      margin-top: 40px !important;
+    }
+    .testimonialHeading{
+          margin-left: 26% !important;
+          margin-top: 70px !important;
+
+    }
+    .per27{
+    margin-left: 27% !important;
+
+    }
+    .carousel-indicators{
+          position: inherit;
+    }
+    .slide{
+          margin-bottom: 20px;
+
+    }
+    .cpright{
+    float: left !important;
+        margin-left: 76px;
+
+    }
+    .footbar{
+      width:92%;
+    }
+    .tnc{
+          margin-left: 34px;
+    }
+    .subnav1{
+          margin-left: -10px;
+    }
+    .mobilemenu{
+      display: block;
+    }
+    .cartopphone{
+      margin-top: 200px !important;
+    }
+    .subnav1{
+      margin-top: -15px;
+    }
+    .container{
+        width:358px;
+    }
+    .text-container{
+        text-align:right;
+        margin-right:2px;
+    }
+    .profile-img{
+        margin-left:-10px;
+    }
+    .circle{
+        margin-left:0px;
+    }
+   
+
+}
+@media only screen and (min-width: 500px) {
+     .mobilemenu{
+      display: none;
+    }
+
+  }
+
 </style>
